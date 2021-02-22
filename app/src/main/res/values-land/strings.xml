@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tap King</string>
+    <string name="start">Debut</string>
+    <string name="difficulty">difficulté</string>
+    <string name="tap">taper</string>
+</resources>
