@@ -3,6 +3,8 @@
     <string name="start">Start</string>
     <string name="difficulty">Difficulty</string>
     <string name="tap">Tap</string>
+    <string name="loose">You lost</string>
+    <string name="win">You won</string>
     <string-array name="vals">
         <item>1</item>
         <item>2</item>

@@ -11,20 +11,22 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ProgressBar progressBar;
+    private MyProgressBar progressBar;
     private Button btn;
     private Spinner spinner;
     private TextView textView;
+    private BtnAction btnAction;
     private int etat;// 0: initial, 1: en cours, 2: fin
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         progressBar=findViewById(R.id.progressBar);
+        progressBar.setMainActivity(this);
         btn=findViewById(R.id.button);
         spinner=findViewById(R.id.spinner);
         textView=findViewById(R.id.textView);
-        BtnAction btnAction=new BtnAction(this);
+        btnAction=new BtnAction(this);
         btn.setOnClickListener(btnAction);
         initialiser();
     }
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         return progressBar;
     }
 
-    public void setProgressBar(ProgressBar progressBar) {
+    public void setProgressBar(MyProgressBar progressBar) {
         this.progressBar = progressBar;
     }
 
@@ -69,5 +71,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void setSpinner(Spinner spinner) {
         this.spinner = spinner;
+    }
+    public BtnAction getBtnAction()
+    {
+        return this.btnAction;
+    }
+
+    public TextView getTextView() {
+        return textView;
     }
 }

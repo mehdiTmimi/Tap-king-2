@@ -27,13 +27,20 @@ public class BtnAction  implements View.OnClickListener {
         else if(mainActivity.getEtat()==1)
         {
             mainActivity.getProgressBar().setProgress(mainActivity.getProgressBar().getProgress()+1);
+
         }
         // arreter le timer
-        timer.cancel();
-        timer.purge();
+       // timer.cancel();
+      //  timer.purge();
     }
     public BtnAction(MainActivity mainActivity)
     {
         this.mainActivity=mainActivity;
     }
+  public void stopTimer()
+  {
+      timer.cancel();
+      timer.purge();
+  }
+
 }

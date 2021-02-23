@@ -33,7 +33,7 @@
 
     <Button
         android:id="@+id/button"
-        android:onClick="teste"
+
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@drawable/bg_btn"
@@ -52,7 +52,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <ProgressBar
+    <com.tmimi.tapking.MyProgressBar
         android:id="@+id/progressBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
